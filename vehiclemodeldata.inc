@@ -1,7 +1,7 @@
 /*
 	This contains extracted vehicle model data from GTA:SA handling.cfg file
 
-	@licence: GPLv2
+	@licence: GPLv3
 	@credits: l0nger for the array
 
 	(c) Kar 2015
@@ -343,3 +343,5 @@ stock Float:vehModelSeatOffsetDistance(model)
 
 stock Float:vehModelCollisionDmgMultiplier(model)
 	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fCollisionDamageMultiplier] : 0;
+
+// End of vehiclemodeldata.inc
