@@ -1,5 +1,5 @@
-#SA-MP VEHICLE MODEL DATA
-Extracted vehicle model data.
+# SA-MP VEHICLE MODEL DATA
+## Extracted vehicle model data.
 
 Allows you to use functions such as "modelMass" which is the same as "GetVehicleModelMass".
 

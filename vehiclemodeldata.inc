@@ -4,7 +4,7 @@
 	@licence: GPLv3
 	@credits: l0nger for the array
 
-	(c) Kar 2015
+	(c) Kar 2015-2017
 */
 
 #if !defined inc_vehicle_modeldata_
@@ -46,7 +46,7 @@ enum e_GTAModelData
 	Float:mD_fCollisionDamageMultiplier
 };
 
-static const vehicleModelData[611][e_GTAModelData] = {
+static const vehicleModelData[211][e_GTAModelData] = {
 	{1700.0, 5008.299805, 2.500000, 0.000000, 0.000000, -0.300000, 85, 2.500000, 2.500000, 2.500000, 5, 160.0, 10.000000, 160.0, "awd", "diesel", 6.2, 0.6, 35.0, 2.4, 0.1, 0.0, 0.3, -0.1, 0.5, 0.3, 0.3, 0.2},
 	{1300.0, 2200.000000, 1.700000, 0.000000, 0.300000, 0.000000, 70, 1.700000, 1.700000, 1.700000, 5, 160.0, 6.000000, 160.0, "fwd", "petrol", 8.0, 0.8, 30.0, 1.3, 0.1, 0.0, 0.3, -0.2, 0.6, 0.0, 0.3, 0.5},
 	{1500.0, 4000.000000, 2.000000, 0.000000, 0.000000, -0.100000, 85, 2.000000, 2.000000, 2.000000, 5, 200.0, 11.200000, 200.0, "rwd", "petrol", 11.0, 0.4, 30.0, 1.2, 0.1, 0.0, 0.3, -0.2, 0.5, 0.4, 0.3, 0.5},
@@ -261,46 +261,46 @@ static const vehicleModelData[611][e_GTAModelData] = {
 };
 
 stock Float:vehModelMass(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fMass] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fMass] : 0.0;
 
 stock Float:vehModelTurnMass(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fTurfMass] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fTurfMass] : 0.0;
 
 stock Float:vehModelDragMultiplier(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fDragMult] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fDragMult] : 0.0;
 
 stock Float:vehModelCenterOfMassX(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fCenterOfMassX] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fCenterOfMassX] : 0.0;
 
 stock Float:vehModelCenterOfMassY(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fCenterOfMassY] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fCenterOfMassY] : 0.0;
 
 stock Float:vehModelCenterOfMassZ(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fCenterOfMassZ] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fCenterOfMassZ] : 0.0;
 
 stock vehModelPercentSubmerged(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_nPercentSubmerged] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_nPercentSubmerged] : 0.0;
 
 stock Float:vehModelTractionMultiplier(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fTractionMultiplier] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fTractionMultiplier] : 0.0;
 
 stock Float:vehModelTractionLoss(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fTractionLoss] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fTractionLoss] : 0.0;
 
 stock Float:vehModelTractionBias(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fTractionBias] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fTractionBias] : 0.0;
 
 stock vehModelMaxGears(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_Trans_nNumberOfGears] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_Trans_nNumberOfGears] : 0.0;
 
 stock Float:vehModelMaxVelocity(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_Trans_fMaxVelocity] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_Trans_fMaxVelocity] : 0.0;
 
 stock Float:vehModelEngineAcceleration(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_Trans_fEngineAcceleration] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_Trans_fEngineAcceleration] : 0.0;
 
 stock Float:vehModelEngineInertia(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_Trans_fEngineInertia] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_Trans_fEngineInertia] : 0.0;
 
 stock vehModelDriveType(model)
 	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_Trans_driveType] : ("unknown");
@@ -309,39 +309,37 @@ stock vehModelEngineType(model)
 	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_Trans_engineType] : ("unknown");
 
 stock Float:vehModelBrakeDeceleration(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fBrakeDeceleration] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fBrakeDeceleration] : 0.0;
 
 stock Float:vehModelBrakeBias(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fBrakeBias] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fBrakeBias] : 0.0;
 
 stock Float:vehModelSteeringLock(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSteeringLock] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSteeringLock] : 0.0;
 
 stock Float:vehModelSuspensionForceLevel(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionForceLevel] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionForceLevel] : 0.0;
 
 stock Float:vehModelSuspensionDamping(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionDamping] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionDamping] : 0.0;
 
 stock Float:vehModelSuspensionHghSpdDamping(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionHighSpeedDamping] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionHighSpeedDamping] : 0.0;
 
 stock Float:vehModelSuspensionUpperLimit(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionUpperLimit] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionUpperLimit] : 0.0;
 
 stock Float:vehModelSuspensionLowerLimit(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionLowerLimit] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionLowerLimit] : 0.0;
 
 stock Float:vehModelSuspensionFrontRearBias(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionFrontRearBias] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionFrontRearBias] : 0.0;
 
 stock Float:vehModelSuspensionAntiDriveMul(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionAntiDriveMult] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSuspensionAntiDriveMult] : 0.0;
 
 stock Float:vehModelSeatOffsetDistance(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSeatOffsetDistance] : 0;
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fSeatOffsetDistance] : 0.0;
 
 stock Float:vehModelCollisionDmgMultiplier(model)
-	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fCollisionDamageMultiplier] : 0;
-
-// End of vehiclemodeldata.inc
+	return (model >= 400 && model <= 611) ? vehicleModelData[model][mD_fCollisionDamageMultiplier] : 0.0;
