@@ -4,7 +4,7 @@
 	@licence: GPLv3
 	@credits: l0nger for the array
 
-	(c) Kar 2015-2017
+	(c) Kar 2015-2019
 */
 
 #if !defined inc_vehicle_modeldata_
